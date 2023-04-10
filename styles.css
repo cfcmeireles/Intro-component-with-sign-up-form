@@ -1,0 +1,284 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-image: url("images/bg-intro-desktop.png");
+  background-color: hsl(0, 100%, 74%);
+  font-size: 16px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(204, 8%, 76%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+#signup-form {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#signup-body {
+  display: grid;
+  grid-template-columns: 500px 600px;
+}
+
+.main-text {
+  display: flex;
+  flex-direction: column;
+  color: hsl(0, 100%, 100%);
+  justify-content: center;
+}
+
+.main-text h1 {
+  position: relative;
+  right: 60px;
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+.main-text p {
+  position: relative;
+  right: 60px;
+}
+
+.form {
+  border-radius: 10px;
+  background-color: hsl(0, 100%, 100%);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.form-body {
+  position: relative;
+  padding-left: 20px;
+  min-height: 500px;
+}
+
+.try-btn {
+  border-radius: 10px;
+  background-color: hsl(248, 32%, 49%);
+  color: hsl(0, 100%, 100%);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.claim-btn {
+  border-radius: 5px;
+  background-color: hsl(154, 59%, 51%);
+  color: hsl(0, 100%, 100%);
+  padding: 10px 50px;
+  border: none;
+  width: 85%;
+  height: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0.2em rgba(18, 166, 102);
+  font-size: 15px;
+}
+
+.claim-btn:hover {
+  background-color: rgba(56, 204, 140, 0.7);
+}
+
+.disclaimer {
+  font-size: 10px;
+  color: hsl(246, 25%, 77%);
+  padding-bottom: 40px;
+  font-weight: 500;
+}
+
+.tos a {
+  color: hsl(0, 100%, 74%);
+  text-decoration: none;
+}
+
+input {
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 5px;
+  width: 80%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+input:first-of-type {
+  margin-top: 40px;
+}
+
+input:focus {
+  outline: 1px solid;
+}
+
+#fname.error::placeholder {
+  color: transparent;
+}
+
+.error-icon {
+  position: absolute;
+}
+
+.invalid-icon,
+.invalid-p,
+.invalid-icon-email,
+.invalid-p-email {
+  display: none;
+}
+
+.invalid-icon,
+.invalid-icon-email {
+  position: relative;
+  z-index: 1;
+  bottom: 65px;
+  left: 500px;
+}
+
+.invalid-p,
+.invalid-p-email {
+  font-size: 11px;
+  font-style: italic;
+  color: hsl(0, 100%, 74%);
+  font-weight: 500;
+  margin-top: -35px;
+  margin-bottom: 0px;
+  justify-content: flex-end;
+  padding-right: 55px;
+}
+
+input.error {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+
+.invalid-email {
+  display: none;
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
+
+input#email.form-input.error {
+  color: hsl(0, 100%, 74%);
+  font-weight: 700;
+}
+
+/* Mobile design */
+
+@media only screen and (max-width: 280px) {
+  body {
+    background-image: url("images/bg-intro-mobile.png");
+  }
+
+  #signup-form {
+    height: 1000px;
+  }
+
+  #signup-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-body {
+    padding: 10px 10px 5px 10px;
+  }
+
+  .main-text h1 {
+    right: 0px;
+    font-size: 22px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .main-text p {
+    text-align: center;
+    right: 0;
+  }
+
+  .claim-btn {
+    padding: 0;
+    width: 90%;
+  }
+
+  .disclaimer {
+    padding: 8px 40px 20px 40px;
+  }
+
+  .invalid-icon,
+  .invalid-icon-email {
+    position: relative;
+    z-index: 1;
+    bottom: 65px;
+    left: 80%;
+  }
+
+  .invalid-p,
+  .invalid-p-email {
+    justify-content: flex-end;
+    padding-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 281px) and (max-width: 1024px) {
+  body {
+    background-image: url("images/bg-intro-mobile.png");
+  }
+
+  #signup-form {
+    height: 1000px;
+  }
+
+  #signup-body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-body {
+    padding: 10px 20px 5px 20px;
+  }
+
+  .main-text h1 {
+    right: 0px;
+    font-size: 22px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+
+  .main-text p {
+    text-align: center;
+    right: 0;
+  }
+
+  .claim-btn {
+    padding: 0;
+    width: 87%;
+  }
+
+  .disclaimer {
+    padding: 8px 50px 20px 50px;
+  }
+
+  .invalid-icon,
+  .invalid-icon-email {
+    position: relative;
+    z-index: 1;
+    bottom: 65px;
+    left: 80%;
+  }
+}
