@@ -9,6 +9,11 @@
   const invalidIconEmail = document.querySelector(".invalid-icon-email");
   const invalidParagraphEmail = document.querySelector(".invalid-p-email");
 
+  var originalPlaceholder = [];
+  for (let i = 0; i < input.length; i++) {
+    originalPlaceholder.push(input[i].placeholder);
+  }
+
   function formSubmit() {
     submitForm.addEventListener("click", function () {
       input.forEach((element) => {
@@ -28,6 +33,9 @@
           });
           element.classList.add("error");
         } else {
+          for (let i = 0; i < input.length; i++) {
+            input[i].placeholder = originalPlaceholder[i];
+          }
           invalidIcon.forEach((icon) => {
             if (icon.getAttribute("data-for") === element.getAttribute("id")) {
               icon.style.display = "none";
